@@ -42,20 +42,24 @@ public class Solution {
 
 	static int[] oddNumbers(int l, int r) {
 		
+		int odd[] = new int[r-l];
+		int x = 0;
 		  while (r >= l) {
-			    if (l%2 == 1) {
+			    if (l%2 != 0) {
 			      System.out.println(l);
+			      odd[x] = l;
 			    }
 			    l++;
+			    x++;
 			  }
 		  
-		return null;
+		return odd;
 	}
 
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) throws IOException {
-    	/*
+    	
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 
         int l = scanner.nextInt();
@@ -66,6 +70,7 @@ public class Solution {
 
         int[] res = oddNumbers(l, r);
 
+        System.out.println(res.length);
         for (int resItr = 0; resItr < res.length; resItr++) {
             bufferedWriter.write(String.valueOf(res[resItr]));
 
@@ -79,8 +84,8 @@ public class Solution {
         bufferedWriter.close();
 
         scanner.close();
-        */
+        
     	
-    	oddNumbers(94, 95);
+    	//oddNumbers(94, 95);
     }
 }
