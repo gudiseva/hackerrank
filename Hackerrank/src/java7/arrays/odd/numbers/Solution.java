@@ -1,3 +1,5 @@
+package java7.arrays.odd.numbers;
+
 /*
  * 
 Given two integers, l and r, print all the odd numbers between l and r (l and r inclusive)
@@ -30,7 +32,6 @@ Explanation 0: The value of l is 2 and value of r is 5. The odd numbers between 
  * 
  */
 
-package java7.arrays.odd.numbers;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -41,12 +42,20 @@ public class Solution {
 
 	static int[] oddNumbers(int l, int r) {
 		
+		  while (r >= l) {
+			    if (l%2 == 1) {
+			      System.out.println(l);
+			    }
+			    l++;
+			  }
+		  
 		return null;
 	}
 
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) throws IOException {
+    	/*
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 
         int l = scanner.nextInt();
@@ -70,5 +79,8 @@ public class Solution {
         bufferedWriter.close();
 
         scanner.close();
+        */
+    	
+    	oddNumbers(94, 95);
     }
 }
