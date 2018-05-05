@@ -34,15 +34,22 @@ package java7.arrays.odd.numbers;
  */
 
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.Scanner;
+import java.io.*;
+import java.math.*;
+import java.text.*;
+import java.util.*;
+import java.util.regex.*;
 
 public class Solution {
 
+    /*
+     * Complete the oddNumbers function below.
+     */
 	static int[] oddNumbers(int l, int r) {
 		
+	     /*
+         * Write your code here.
+         */
 		int arrSize = 0;
 		
 		if(isEven(l) && isEven(r)) {
@@ -91,8 +98,6 @@ public class Solution {
         int r = scanner.nextInt();
         //scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])*");
 
-        scanner.close();
-    	
         int[] res = oddNumbers(l, r);
         
         for (int resItr = 0; resItr < res.length; resItr++) {
@@ -108,5 +113,6 @@ public class Solution {
         bufferedWriter.flush();
         bufferedWriter.close();
     	
+        scanner.close();
     }
 }
