@@ -6,9 +6,20 @@ import java.io.IOException;
 import java.util.Scanner;
 
 /*
- * Number of digits
- * Number in array
- * search in array
+ * Input:
+ * Line 1: Number of digits
+ * Line 2: Array of Numbers
+ * Line 3: Number to be searched in the Array
+ * 
+ * E.g.
+ * 5
+ * 1 2 3 4 5
+ * 3
+ * 
+ * Output:
+ * TRUE
+ * 
+ * <<< SET OUTPUT_PATH = System.out in Run As -> Run Configurations... -> Environment >>>
  * 
  */
 
@@ -42,17 +53,16 @@ public class Solution {
         }
         
         int k = scanner.nextInt();
-        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])*");
-
+        //scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])*");
+        
+        scanner.close();
+        
         String res = arraySearch(a, n, k);
-        //System.out.println(res);
-        bufferedWriter.write("Result: " + res);
-
+        bufferedWriter.write(String.valueOf(res));
         bufferedWriter.newLine();
+
         bufferedWriter.flush();
         bufferedWriter.close();
-
-        scanner.close();
 
 	}
 
